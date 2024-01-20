@@ -37,6 +37,28 @@
       </nav>
 
     <h1>Market Page</h1>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <!-- Your Columns HERE -->
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Barcode</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Your rows inside the table HERE: -->
+                {% for item in items %}
+                    <tr>
+                        <th scope="col">{{ item.id }}</th>
+                        <th scope="col">{{ item.name }}</th>
+                        <th scope="col">{{ item.barcode }}</th>
+                        <th scope="col">${{ item.price }}</th>
+                    </tr>
+                {% endfor %}
+        </tbody>
+    </table>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
